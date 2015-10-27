@@ -1,14 +1,626 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Flexbox</title>
+lang="en">
+<head>
     <meta charset="utf-8">
-    <meta name="author" content="Anna Irish">
-    <meta name="description" content="Historcizing Project on Flexbox">
-    <meta name="keywords" conent="Flexbox,Reponsive,Design,CSS,HTML,Historicizing">
-  </head>
-<body>
-  <article>
-    <h1>Flexbox</h1>
-  </article>
-</body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Flexbox historcizing project tracing back the history of Flexbox, its current uses, and projected outlook.">
+<meta name="author" content="Anna Irish">
+<meta name="keywords" content="flexbox, terminology, CSS, HTML, grid, browser, support, history, W3C">
+
+    <title>Flexbox Historicizing Project</title>
+<style type=text/css>
+  /*naivgation menu bar*/
+@import "compass/css3";
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: #00a087;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0; 
+  
+ background: #53CFA6;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 0;
+  color: white;
+  font-family: Verdana;
+}
+
+.navigation a:hover {
+  background-color: #42A685;
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 0;
+    border-top: 0px solid rgba(255,255,255,0.3); 
+    border-bottom: 0px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+/*extra nav menu code*/
+@import "compass/css3";
+
+.navigation {
+  list-style: none;
+  margin: 0; 
+  
+  background: #53CFA6;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+  font-family: Verdana;
+}
+
+.navigation a:hover {
+  background: #42A685;
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+body {
+    background-image: url("http://i.imgur.com/Gwdn8Ey.png?1");
+    background-repeat: repeat;
+  margin: 0px;
+}
+
+/*header*/
+#headerimg {
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0px auto;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+  marign: 0px auto;
+}
+
+.content {
+  width: 100%;
+  height: 2000px;
+  margin: 0px auto;
+}
+
+/*header text*/
+h3 {
+  font-family: League Gothic;
+  font-size: 5em;
+  color: #53CFA6;
+  text-align: center;
+}
+
+.main-header {
+  text-align: center;
+}
+
+/*headers*/
+h1 {
+  text-align: center;
+  font-family: League Gothic;
+  padding: 0px;
+  font-size:2.5em;
+  color: #53CFA6;
+}
+
+h2 {
+  text-align: center;
+  padding: 0px;
+  font-size: 2em;
+  font-family: League Gothic;
+}
+
+/*about flexbox*/
+.aboutflexbox {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.module {
+  padding: 10px;
+  width: 100%;
+}
+
+/*flexbox layout module*/
+.module img {
+    display: block;
+    min-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*paragraphs*/
+.blocktext {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+p {
+  font-size: 1em;
+  text-indent: 25px;
+  font-family: Verdana;
+  color: #474C4B;
+  -moz-box-shadow: 0 0 10px #777777;
+  -webkit-box-shadow: 0 0 10px #777777;
+  box-shadow: 0 0 10px #777777;
+  padding: 10px
+}
+
+</style>
+</head>
+  <body>
+   <nav class="fixed-nav-bar">
+  <!-- Fixed navigation bar content -->
+     <ul class="navigation">
+  <li><a href="#about">About</a></li>
+  <li><a href="#history">History</a></li>
+  <li><a href="#terminology">Terminology</a></li>
+  <li><a href="#gridvsflexbox">Grid Vs. Flexbox</a></li>
+  <li><a href="#currentuse">Current Use</a></li>
+  <li><a href="#outlook">Outlook</a></li>
+   <li><a href="#resources">Resources</a></li>
+</ul>
+    </div>
+    </nav>
+  
+    <div class="header-cont">
+ <div style="background-image:url(http://i.imgur.com/FKgxok8.jpg?1); background-repeat:repeat-x;
+ width:100%;
+ height:100%;
+ padding:10px;
+ margin: 0px auto;">
+   <h3> F L E X B O X </h3>
+   </div>
+      
+   <a name="about"></a><h1>ABOUT FLEXBOX</h1>
+
+  <div class="blocktext">
+  <p>Flexbox is a layout module that’s goal is to provide an efficient way to arrange elements on a page. These elements are in a container and it is possible to layout, align, and distribute space among the items in the container without knowing their size. The main purpose of the layout is allowing the container to best fill the space provided, whether it be on a computer page or mobile screen. A flex container can expand or shrink items to either fill available space or prevent overflow. Thus, Flexbox is responsive and its current uses reflect its responsive capabilities.</p>
+    </div>
+      
+  <h2>FLEXBOX LAYOUT</h2>
+  <div class="module">
+  <img src="https://developer.mozilla.org/files/3739/flex_terms.png" alt="flexbox layout"/>   
+</div>    
+      
+ <a name="history"><h1>HISTORY</h1></a>
+ <h2>Overview</h2>
+
+<div class="blocktext">
+  <p>The first working flexbox draft came out July 23, 2009. There were three major revisions of the flexbox spec. The current version is stable and a W3C (World Wide Web Consortium) Candidate Recommendation. The three major revisions of the flexbox spec are: the 2009 working draft, the 2011 version, and the current working draft version from May 2015. The current working draft was reviewed through June 11, 2015 and there is now an editor's draft as of October 2015. 
+  </p>
+      </div>
+
+ <h2>Resolved Issues</h2>
+  <div class="blocktext">
+  <p> Throughout Flebox's development there have been 19 issues presented and resolved. These issues are exclusively related to the spec as opposed to other issues of naming terminology.
+  
+ <br>
+ <br>
+    <b>Issue #1:</b><br><i>Summary:</i> Multiline flexbox is missing from current draft.
+    <br>
+    <br><i>Proposal:</i> flex-wrap: no-wrap | wrap | balance
+    <br> or
+    <br>
+    flex-lines: single | multiple
+    <br>
+    <br><i>Resolved:</i> flex-wrap: no-wrap | wrap
+ <br>
+ <br>
+    <b>Issue #2:</b><br><i>Summary:</i> Flex-direction property does not extend to more values needed for multiline flexbox.
+    <br>
+    <br><i>Proposal:</i> Options for adding multiline http://lists.w3.org/Archives/Public/www-style/2011Jun/0116.html
+    <br>
+    <br><i>Resolved:</i> resolved as proposal
+ <br>
+ <br>
+    <b>Issue #3:</b> <br><i>Summary:</i> Flexbox has two ways to align in transverse direction. This is confusing and still incomplete. Suggestion: Try to make it consistent with Grid and/or table.
+    <br>
+    <br><i>Proposal:</i> 
+    <br>
+    <br><i>Resolved:</i>
+  <br>
+  <br>
+    <b>Issue #4:</b><br><i>Summary:</i> Should consider 'true-center' as an align option for flexbox. 
+    <br>
+    <br><i>Proposal:</i> 'true-center' has been proposed many times and has dedicated supports.
+    <br>
+    <br><i>Resolved:</i> not in flexbox spec consider for CSS3 model.
+  <br>
+  <br>
+    <b>Issue #5:</b><br><i>Summary:</i> Page breaking behavior is not defined for flexbox.
+    <br>
+    <br><i>Propsoal:</i> flexbox spec says nothing about what happens when flexbox intersects page boundaries. Need to define this.
+    <br>
+    <br><i>Resolved:</i> resolved
+ <br>
+ <br>
+    <b>Issue #6:</b><br><i>Summary:</i> 'inline-' display values work around limitations of 'display' property semantics. Need separate properties for element placement and elemenet content layout. 
+    <br>
+    <br><i>Proposal:</i> Describe a single new 'display-inside' value that triggers flexbox layout.
+    <br>
+    <br><i>Resolved:</i>This is a change for CSS3-Box
+ <br>
+ <br>
+    <b>Issue #7:</b>
+    <br><i>Summary:</i> Questioning if 'float' property on flex items is ignored or honored and wrapped into anonymous black. 
+    <br>
+    <br><i>Proposal:</i>
+    <br>
+    <br><i>Resolved:</i>
+ <br>
+ <br>
+    <b>Issue #8:</b> 
+    <br><i>Summary:</i> Which is more intuitive: 'flex-order' or 'flex-index
+    <br>
+    <br><i>Proposal:</i> Keep 'flex-order' 
+    <br>
+    <br><i>Resolved:</i> Resolved as suggested.
+ <br>
+ <br>
+    <b>Issue #9:</b><br><i>Summary:</i> There are no properties in multiline flexbox to control line stacking direction and line pack.
+   <br>
+    <br><i>Proposal:</i> flex-line-progression: normal | reverse
+    <br>
+    flex-line-pack: before | after | middle | distribute
+    <br>
+    <br><i>Resolved:</i> 'flex-line-pack'
+ <br>
+ <br>
+    <b>Issue #10:</b>
+    <br><i>Summary:</i> The "flex item" definition needs exact rules on handling absolute-positioned children. 
+  <br>
+  <br>
+    <i>Proposal 1:</i> Abosulte positoned items leave behind a placeholder, which will be treated like a 0x0 inline element.
+   <br>
+    <br><i>Proposal 2:</i> Ignore position: absolute on flexbox children.
+    <br>
+    <br><i>Resolved:</i> Absolute positioned (Abspos) elements leave behind placeholders and all that implies.
+  <br>
+  <br>
+    <b>Issue #11</b>
+    <br><i>Summary:</i> There is not an exact definition for how anonymous flex items are created from inline content.
+    <br>
+    <br><i>Proposal:</i> Since anonymous flexbox items are created in an element tree, there should be a sequence of plain text and inline elements that produce one anonymous flexbox item, regardless of what is contained within inline elements (including any anonymous blocks).
+    <br>
+    <br><i>Resolved:</i> Blocks nested within inline elements do not break anonymous flexbox items.
+    <br>
+    <br>
+    <b>Issue #12</b> 
+    <br><i>Summary:</i> Should consider 'stack' as a flexbox direction.
+    <br>
+    <br><i>Proposal:</i>
+    flex-flow: stack;
+    <br> Children replaced one on top of another. Containers are equal to tallest/widest child dimensions.
+    <br>
+    <br><i>Resolved:</i> This suggestion is not appropriate for flexbox, due to the alignment being only applicable to one direction at a time. Grid layout behaves as stack when rows/columns are not specified for items.
+  <br>
+  <br>
+    <b>Issue #13:</b> 
+    <br><i>Summary:</i> The default values in flex() function should be the initial values. The current spec says "If flex() function has a single value and it is a length, a percentage, or a valid keyword for 'width' or 'height', the preferred size is set to that value, the positive flexibility is set to 1, and the negative flexaibility is set to 0."
+    <br>
+    <br><i>Proposal:</i> Should always use the initial values as defaults in flex().
+    <br>
+    <br><i>Resolved:</i> The default values in flex() function will be different from initial because it is more useful to have default flex of 1 rather than 0. Also, using flex() function makes it clear that flexibility is desired. 
+    <br>
+    <br>
+    <b>Issue #14:</b> 
+    <br><i>Summary:</i> What is the meaning of 'before' and 'after' in 'flex-align'? The 2009 spec reversed alignment direction for reverse flexbox but that did not make sense. There is no way to specify alignment direction without having to specifiy wrap. 
+   <br>
+    <br><i>Proposal:</i> Make alignment direction wrap direction in multi-line flexbox and block flow direction in single-line flexbox.
+  <br>
+    <br><i>Resolved:</i> Resolved as proposed.
+  <br>
+  <br>
+    <b>Issue #15:</b><br><i>Summary:</i> There is no flex() function and no min/max values for the treatement of margins and paddings in flex algorithm (with flex 1 for 'auto'). Flex margins should either have full support of flexbility or none at all. Suggesting if 'auto' margins on main axis were used after flex sizing and before Pack.
+    <br>
+    <br><i>Proposal:</i> Apply to 'width' and 'height' only. 
+   <br>
+    <br><i>Resolved:</i> Resolved as proposed.
+   <br>
+    <br>
+    <b>Issue #16:</b><br><i>Summary:</i> There needs to be a solid use case for treating "margin:auto" as "margin:flex(0px 1 0)" along main axis in flexbox.
+    <br>
+    <br><i>Proposal:</i> Remove flexible margins.
+    <br>
+    <br><i>Resolved:</i> Resolved as proposed.
+    <br>
+    <br>
+    <b>Issue #17:</b> <br><i>Summary:</i> What is the effective min width/height of a flex item with specified width/height? Normally the min-width is irrelevant when width is specified but flex item can be smaller than specified size due to negative flexing. 
+    <br>
+    <br><i>Option 1:</i> Use content min-width when sizing to content, specified min-width otherwise; min-height only if specified.
+    <br>
+    <br><i>Option 2:</i> Use min-width only if specified.
+    <br>
+    <br><i>Option 3:</i> min-width/min-height is consulted after flex distribution. If any item is smalelr than min, it gets its min size and no flexibility, then flex distribution is restarted.
+    <br>
+    <br><i>Proposal:</i> Use Option 3: use of min-width vs min-content to be clarified.
+    <br>
+    <br><i>Resolved:</i> Minimum width is just min-width: min-content is not an implied minimum (min-content is never taken into account in flex calculations unless used explicity).
+    <br>
+    <br>
+    <b>Issue #18:</b><br><i>Summary:</i> The combination of margins and item-level flex-align is redudant and is not support common case where all items have the same alignment.
+    <br>
+    <br><i>Proposal:</i> Have auto margins  set to zero or auto margins behave as horizontal margins in normal flow (align or center).
+    <br>
+    <br><i>Resolved:</i> Accepted the proposal.
+    <br>
+    <br>
+    <b>Issue #19:</b> <br><i>Summary:</i> flex() has issues that 'flex' property would not have. For example, flex() applies to 'width' and 'height' properties always, regardless of whether the elements is a flexbox item. 
+    <br>
+    <br><i>Proposal:</i> Seprate 'flex' property.
+    <br>
+    <br><i>Resolved:</i> Accepted the proposal. 
+ </p>
+ </div>
+ 
+      <h2>Spec Syntax Property Mapping</h2>
+      
+      <div class="blocktext">
+      <p>The flexbox module had major changes between 2009 spec and 2011 spec. This map shows a table comparing old and new (2011 version) flexbox.</p>
+      </div>
+      
+    <div class="module spec">
+      <img src="http://i.imgur.com/h0rhInJ.png"/>    
+      </div>  
+<a name="terminology"><h1>TERMINOLOGY</h1><a/>
+  <h2>Definitions</h2>
+  
+  <div class="blocktext">
+    <p><b>display</b>- defines a flex container; inline or block depending on the given value. It allows a flex context for all of its direct children.
+    </p>
+    
+    <p data-height="130" data-theme-id="0" data-slug-hash="YyLWJp" data-default-tab="result" data-user="AnnaIrish" class='codepen'>See the Pen <a href='http://codepen.io/AnnaIrish/pen/YyLWJp/'>flex display</a> by Anna Irish (<a href='http://codepen.io/AnnaIrish'>@AnnaIrish</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+  </div>
+  
+  <div class="blocktext">
+    <p><b>flex direction</b>- Defines the direction flex items are placed in the flex container. Flexbox is a single-direction layout concept. Flex items have primarily horizontal rows or vertical columns.
+    </p>
+  
+    <p data-height="130" data-theme-id="0" data-slug-hash="RWyROg" data-default-tab="result" data-user="AnnaIrish" class='codepen'>See the Pen <a href='http://codepen.io/AnnaIrish/pen/RWyROg/'>flex direction</a> by Anna Irish (<a href='http://codepen.io/AnnaIrish'>@AnnaIrish</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    
+    <div class="blocktext">
+    <p><b>flex-wrap</b>- by deafault, flex items are single-lined. 'flex-wrap' allows the items to wrap as needed. The direction in which the new lines are stacked can also be determined.
+    </p>
+      
+      <p data-height="130" data-theme-id="0" data-slug-hash="XmqKvW" data-default-tab="result" data-user="AnnaIrish" class='codepen'>See the Pen <a href='http://codepen.io/AnnaIrish/pen/XmqKvW/'>flex-wrap</a> by Anna Irish (<a href='http://codepen.io/AnnaIrish'>@AnnaIrish</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+      
+      <div class="blocktext">
+    <p><b>flex-flow</b>- This is the shorthand for flex-direction and flex-wrap properties, which when combined define the flex container's main and cross axes. Default is row nowrap. </p>
+        
+        <p data-height="99" data-theme-id="0" data-slug-hash="VvxKYb" data-default-tab="result" data-user="AnnaIrish" class='codepen'>See the Pen <a href='http://codepen.io/AnnaIrish/pen/VvxKYb/'>flex-flow</a> by Anna Irish (<a href='http://codepen.io/AnnaIrish'>@AnnaIrish</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+      
+      <div class="blocktext">
+    <p><b>justify-content</b>- Defines the alignment along the main axis. Helps distribute extra free space left over when either all the flex items on a line are inflexible or are flexbile but have reached their maximum size. </p>
+      
+      <p data-height="130" data-theme-id="0" data-slug-hash="WQJGNa" data-default-tab="result" data-user="AnnaIrish" class='codepen'>See the Pen <a href='http://codepen.io/AnnaIrish/pen/WQJGNa/'>justify-content</a> by Anna Irish (<a href='http://codepen.io/AnnaIrish'>@AnnaIrish</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        
+      <div class="blocktext">
+    <p><b>align-items</b>- Defines the default behaviour for how flex items are laid out along the cross axis on the current line. </p>
+        
+        <p data-height="130" data-theme-id="0" data-slug-hash="vNjXOJ" data-default-tab="result" data-user="AnnaIrish" class='codepen'>See the Pen <a href='http://codepen.io/AnnaIrish/pen/vNjXOJ/'>align-items</a> by Anna Irish (<a href='http://codepen.io/AnnaIrish'>@AnnaIrish</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+      
+      <div class="blocktext">
+    <p><b>align-content</b>- Aligns a flex container's lines within where there is extra space in the cross-axis. This property has no effect when there is only one line of flex items. </p>
+        
+        <div class="blocktext">
+    <p><b>order</b>- Controls the order in which flex items appear in the flex container.
+    </p>
+          
+    <div class="blocktext">
+    <p><b>flex-grow</b>- Defines the ability for a flex item to grow if necessary. Accepts unitless value that serves as a proportion and dictates what amount of the available space inside the flex container the items should take up.
+    </p>
+         
+    <div class="blocktext">
+    <p><b>flex-shrink</b>- Defines ability of a flex item to shrink if necessary.
+    </p>
+           
+    <div class="blocktext">
+    <p><b>flex-basis</b>- Defines the default size of an element before the remaining space is distributed. 
+    </p>
+      
+    <div class="blocktext">
+    <p><b>flex</b>- Shorthand for 'flex-grow', 'flex-shrink', and 'flex-basis' combined. Shorthand is recommended because it sets the other values intelligently. 
+    </p>
+      
+    <div class="blocktext">
+    <p><b>align-self</b>- Allows the default alignment (or the one specified by 'align-items')to be overridden for individual flex items. 
+    </p>
+      
+      <h2>Naming Terminology</h2>
+      
+      <div class="blocktext">
+        
+       <p>Suggestions:
+         <br>
+         <br><i>Suggestion:</i> Rename "flexbox" to "flex containter"
+        <br>
+         <br>
+         <i>Suggestion:</i> Reanme "flexbox item" to "flex item" or "flex box"
+         <br>
+        <br>
+         <i>Reason:</i> Make consistent with CSS terminology elsewhere</p>
+      </div>
+      <!--Grid vs Flexbox!-->
+      <a name="gridvsflexbox"></a>
+      <h1>Grid vs. Flexbox</h1>
+      <h2>Grid</h2>
+      
+      <div class="blocktext">
+        <p><b>How the page renders:</b> When using grid, the layout is defined in the container therefore the nav is rendered into the middle column as soon as it starts to arrive.
+    <br>
+    <br>
+          <b>Arranging content:</b> Grid can only arrange the content in the order it is coded.
+        </p>
+        
+        <h2>Flexbox</h2>
+     <div class="blocktext">
+       <p><b>How the page renders:</b> When using the flexbox module, content dictates the layout of the webpage. This is because the container declares itself as a flexbox and the child elements declare how they will interact with each other inside the flexbox. When the page starts to load, the container begins receiving the first child, which is the main content. When the nav arrives, the content resizes to make room for it.
+         <br>
+         <br>
+         <b>Arranging content:</b> By default, Flexbox will arrange items in source order. However, the order property controls how they actually appear in the flex container.
+       </p>
+        </div>
+      </div>
+   
+      <a name="currentuse"><h1>Current Use</h1></a>
+      
+      <h2>Flexbox Grid</h2>
+      
+      <div class="blocktext">
+      <p>
+      A grid system based on the flex display property.
+       <br>
+      <br>
+        Options: Responsive, Fluid, Simple Syntax, Offsets, Auto Width, Nested Grids, Alignment, Reordering, and Reversing
+        </p>
+      </div>
+      
+      <h2>Problems solved by flexbox</h2>
+      
+      <div class="blocktext">
+      <p>List:
+        <br>
+        <br>
+        Better, simpler grid systems
+        <br>
+        <br>
+        Input Add-Ons
+        <br>
+        <br>
+        Media Object
+        <br>
+        <br>
+        Sticky Footer
+        <br>
+        <br>
+        Vertical Centering
+        <br>
+        <br>
+        Holy Grail Layout
+        </p>
+      </div>
+      
+      <a name="outlook"></a>
+      <h1>Outlook</h1>
+      
+      <h2>Browser Support</h2>
+      <div class="blocktext">
+        <p> The newest spec is implemented in all 5 major desktop browsers: Chrome, Firefox, Safari, Internet Explorer 10+, and Opera 12.1+. There are no robust polyfills for the current spec, but you can mix old and new flexbox for maximum browser support. https://css-tricks.com/using-flexbox/
+        </p>
+      </div>
+      
+      <h2> Bugs & Workarounds </h2>
+      <div class="blocktext">
+        <p>
+          Example: minimum content sizing of flex items not honored Workaround: set flex-shrink to value of 0 instead of default 1 and a flex-basis value of auto https://github.com/philipwalton/flexbugs
+        </p>
+      </div>
+      
+    <a name="resources"></a>
+      <h1>Resources</h1>
+      
+    <div class="blocktext">
+     <p> Websites:
+       <br>
+       https://wiki.csswg.org/spec/css3-flexbox
+     <br>
+       https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties
+     <br>
+      https://bocoup.com/weblog/dive-into-flexbox
+     <br>
+       
+      http://html5please.com/#flexbox
+     <br>
+       
+      https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+      <br>
+      https://drafts.csswg.org/css-flexbox-1/
+      </p>
+      </div>
+      
