@@ -59,15 +59,6 @@
   }
 }
 
-@font-face {
-  font-family: 'League Gothic';
- src: url('leaguegothic-regular-webfont.eot');
-   src: url('leaguegothic-regular-webfont.woff') format('woff'),
- url('leaguegothic-regular-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
     background-image: url("http://i.imgur.com/Gwdn8Ey.png?1");
     background-repeat: repeat;
@@ -96,7 +87,7 @@ body {
 
 /*header text*/
 h3 {
-  font-family: 'League Gothic';
+  font-family: 'Oswald';
   font-size: 5em;
   color: #87D8CF;
   text-align: center;
@@ -112,7 +103,7 @@ h3 {
 /*headers*/
 h1 {
   text-align: left;
-  font-family: 'League Gothic';
+  font-family: 'Oswald';
   padding: 0;
   font-size:3.2em;
   color: #87D8CF;
@@ -127,7 +118,7 @@ h2 {
   padding: 0;
   margin-top: 50px;
   font-size: 2.5em;
-  font-family: 'League Gothic';
+  font-family: 'Oswald';
 }
 
 h4 {
