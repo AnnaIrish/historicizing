@@ -74,26 +74,6 @@ body {
   margin: 0px;
 }
 
-/*header*/
-#headerimg {
-  background-repeat: repeat-x;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0px auto;
-}
-
-.header {
-  height: 50px;
-  width: 100%;
-  marign: 0px auto;
-}
-
-#content {
-  width: 100%;
-  margin: 0px auto;
-}
-
 /*header text*/
 h3 {
   font-family: 'League Gothic';
