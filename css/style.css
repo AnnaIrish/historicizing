@@ -77,12 +77,12 @@ body {
 .header {
   height: 50px;
   width: 100%;
-  marign: 0px auto;
+  marign: 0 auto;
 }
 
 #content {
   width: 100%;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 /*header text*/
@@ -186,7 +186,7 @@ p {
 .flexdirection {
   background: #A1E0D9;
   padding: 10px;
-  margin-top: 0px;
+  margin-top: 0;
   width: 100%;
 }
 
@@ -199,7 +199,7 @@ p {
 .flex-flow {
   background: #A1E0D9;
   padding: 10px;
-  margin-top: 0px;
+  margin-top: 0;
   width: 100%;
 }
 
@@ -212,7 +212,7 @@ p {
 .align-items {
   background: #A1E0D9;
   padding: 10px;
-  margin-top: 0px;
+  margin-top: 0;
   width: 100%;
 }
 
@@ -238,7 +238,7 @@ p {
 .flex-grow {
   background: #A1E0D9;
   padding: 10px;
-  margin-top: 0px;
+  margin-top: 0;
   width: 100%;
 }
 
@@ -251,7 +251,7 @@ p {
 .flex-basis {
     background: #A1E0D9;
   padding: 10px;
-  margin-top: 0px;
+  margin-top: 0;
   width: 100%;
 }
 
