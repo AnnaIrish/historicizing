@@ -102,18 +102,16 @@ h3 {
 
 /*headers*/
 h1 {
-  text-align: left;
+  text-align: center;
   font-family: 'Oswald';
   padding: 0;
   font-size:3.2em;
   color: #87D8CF;
   margin-top: -55px;
-  margin-left: 70px;
 }
 
 h2 {
-  text-align: left;
-  margin-left: 70px;
+  text-align: center;
   color: #3C3C3E;
   padding: 0;
   margin-top: 50px;
