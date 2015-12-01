@@ -1,14 +1,4 @@
 /*navigation bar*/
-.fixed-nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 50px;
-  background-color: #00a087;
-}
-
 .navigation {
   list-style: none;
   margin: 0;
@@ -155,11 +145,11 @@ p {
   line-height: 1.4em;
 }
 
-#blocktext {
+.blocktext {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  max-width: 1300px;
+  max-width: 1200px;
 }
 
 /*terminology overview*/

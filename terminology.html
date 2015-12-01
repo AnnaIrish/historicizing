@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -10,7 +11,6 @@
 </head>
 <body>
   <div section="navigationbar">
-   <nav class="fixed-nav-bar">
   <!-- Fixed navigation bar content -->
     <ul class="navigation">
       <li><a href="#about">About</a></li>
@@ -21,7 +21,6 @@
       <li><a href="#outlook">Outlook</a></li>
       <li><a href="#resources">Resources</a></li>
     </ul>
-   </nav>
   </div>
     
   <div class="header-cont">
@@ -29,15 +28,15 @@
     width:100%;
     padding:10px;
     margin: 0px auto;">
-    <h3> F L E X B O X </h3>
+    <h3>F L E X B O X</h3>
     </div>
   </div>
  
  <!--Overview-->  
   <h1> Terminology </h1>
-  <a name="flex-item"></a><a name="flex-container"></a>
+  <a id="flex-item"></a><a id="flex-container"></a>
   <div class="overview">
-    <div id="blocktext">
+    <div class="blocktext">
       <p> Flexbox is a module, which means its has its own complex set of parts that work together to create something. It has its own terminology specific to the module. Each term has its own property and some even have sub-terms that alter their respected property. These terms went through a terminology naming process to properly correlate their name to their attributes. For example, the term "flexbox" was renamed to "flex container". The term flex container makes more sense because the flex container contains flex items. Describing the property is the main goal of the term's names. These terminology changes were done through messages by individuals in the CSS Working Group. Below are the definitions for all flexbox terms. With each definition their is a codepen to demonstrate how each term would be used in HTML/CSS. Some codepens have a result to visualize the term's properties.
       </p>
       <br>
@@ -51,7 +50,7 @@
   
   <!--term:display-->
   <div class="displayterm">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>display</h4>
       <p> 'display' is not a property specific to flexbox and instead is a CSS property. In general it defines the type of rendering box used for an element. In the case of flexbox, it defines a <a href="#flex-container">flex container</a>; inline or block depending on the given value. Thus allowing a flex context for all of its direct children. The codepen shows how display specifies flexbox as its rendering box. 
       </p>
@@ -61,15 +60,15 @@
   </div>
   
   <!--term:flex direction-->
-  <a name="flex-direction">
+  <a id="flex-direction"></a>
   <div class="flexdirection">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>flex-direction</h4>
       <p>Defines the direction <a href="#flex-item">flex items</a> are placed in the flex container. Flexbox is a single-direction layout concept. Flex items have primarily horizontal rows or vertical columns. The four options for flex-direction are row | row-reverse | column | column reverse. row and row-reverse are dependent on the writing mode. 
       </p>
 
       <!--flex-direction:row-->    
-      <a name="row-reverse"></a>
+      <a id="row-reverse"></a>
       <h5>flex-direction: row </h5>
       <p>This places the flex items horizontally in order from left to right.</p>
       <p data-height="165" data-theme-id="20703" data-slug-hash="XmPNJJ" data-default-tab="result" data-user="AnnaIrish" class='codepen'>See the Pen <a href='http://codepen.io/AnnaIrish/pen/XmPNJJ/'>flex-direction row</a> by Anna Irish (<a href='http://codepen.io/AnnaIrish'>@AnnaIrish</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
@@ -82,7 +81,7 @@
       <p data-height="165" data-theme-id="20703" data-slug-hash="dYqKXv" data-default-tab="result" data-user="AnnaIrish" class='codepen'>See the Pen <a href='http://codepen.io/AnnaIrish/pen/dYqKXv/'>flex-direction: row-reverse</a> by Anna Irish (<a href='http://codepen.io/AnnaIrish'>@AnnaIrish</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
       <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
   
-      <a name="column-reverse"></a> 
+      <a id="column-reverse"></a> 
       <h5>flex-direction: column </h5>
       <p> This places the flex items vertically in order from top to bottom. 
       </p>  
@@ -94,9 +93,9 @@
   </div>
     
   <!--term:flex-wrap-->
-  <a name="flex-wrap"></a>
+  <a id="flex-wrap"></a>
   <div class="flexwrap">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>flex-wrap</h4>
       <p>By default, flex items are single-lined. 'flex-wrap' allows the items to wrap as needed meaning the some flex items may move to a new line. The direction in which the new lines are stacked can also be determined. There are three option for flex-wrap: nowrap | wrap | wrap-reverse. 
       </p>
@@ -119,7 +118,7 @@
   
   <!--term:flex-flow-->
   <div class="flex-flow">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>flex-flow</h4>
       <p>This is the shorthand for <a href="#flex-direction">flex-direction</a> and <a href="#flex-wrap">flex-wrap</a> properties, which when combined define the flex container's main and cross axes. The default for flex-flow is row nowrap. flex-flow's formal syntax is <'flex-direction'> || <'flex-wrap'> meaning when defining flex-flow, flex-direction is defined before flex-wrap.
       </p>
@@ -130,7 +129,7 @@
       
   <!--term:justify-content-->
   <div class="justify-content">
-    <div id="blocktext">   
+    <div class="blocktext">   
       <h4>justify-content</h4>
       <p>Defines the alignment along the main axis. Flexbox's goal is to fill the extra space on a page. This property helps distribute free space left over when either all the <a href="flex-item">flex items</a> on a line are inflexible or are flexbile but have reached their maximum size. There are five ways to justify content: flex-start | flex-end | center | space-between | space-around. The navigation bar uses center and space-between.
       </p>
@@ -161,9 +160,9 @@
   </div>
     
   <!--term:align-items-->
-  <a name="align-items"></a>
+  <a id="align-items"></a>
   <div class="align-items">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>align-items</h4>
       <p>Defines the default behaviour for how flex items are laid out along the cross axis on the current line.
       </p>
@@ -174,7 +173,7 @@
      
   <!--term:align-content-->      
   <div class="align-content">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>align-content</h4>
       <p>Aligns a flex container's lines within where there is extra space in the cross-axis. This property has no effect when there is only one line of flex items.
       </p>
@@ -183,7 +182,7 @@
  
   <!--term:align-self-->
   <div class="align-self">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>align-self</h4>
       <p>Allows the default alignment (or the one specified by <a href="#align-items">'align-items'</a>) to be overridden for individual flex items. 
       </p>
@@ -192,7 +191,7 @@
       
   <!--term:order-->
   <div class="order">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>order</h4>
       <p>Controls the order in which <a href="#flex-item">flex items</a> appear in the <a href="#flex-container">flex container</a>.
       </p>
@@ -200,19 +199,19 @@
   </div>
     
   <!--flex-grow-->
-  <a name="flex-grow"></a>
+  <a id="flex-grow"></a>
   <div class="flex-grow">
-    <div id="blocktext">
-      <h4>flex-grow</h5>
+    <div class="blocktext">
+      <h4>flex-grow</h4>
       <p>Defines the ability for a <a href="#flex-item">flex item</a> to grow if necessary. Accepts unitless value that serves as a proportion and dictates what amount of the available space inside the <a href="flex-container">flex container</a> the items should take up.
       </p>
     </div>
   </div>
          
   <!--term:flex-shrink-->
-  <a name="flex-shrink"></a>   
+  <a id="flex-shrink"></a>   
   <div class="flex-shrink">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>flex-shrink</h4>
       <p>Defines ability of a <a href="#flex-item">flex item</a> to shrink if necessary.
       </p>
@@ -220,9 +219,9 @@
   </div>
     
   <!--term:flex-basis-->
-  <a name="flex-basis"></a>  
+  <a id="flex-basis"></a>  
   <div class="flex-basis">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>flex-basis</h4>
       <p><b>flex-basis</b>- Defines the default size of an element before the remaining space is distributed. 
       </p>
@@ -231,7 +230,7 @@
       
   <!--term:flex-->
   <div class="flexterm">
-    <div id="blocktext">
+    <div class="blocktext">
       <h4>flex</h4>
       <p>Shorthand for <a href="#flex-grow">'flex-grow'</a>, <a href="#flex-shrink">'flex-shrink'</a>, and <a href="#flex-basis">'flex-basis'</a> combined. Shorthand is recommended because it sets the other values intelligently. 
       </p>
