@@ -137,6 +137,8 @@ a:visited {
 /*lists*/
 ul {
   list-style-type: none;
+  font-family: verdana;
+  color: white;
 }
 
 /*paragraphs*/
