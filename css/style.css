@@ -134,6 +134,10 @@ a:visited {
   color: white;
 }
 
+/*lists*/
+ul {
+  list-style-type: none;
+}
 
 /*paragraphs*/
 p {
