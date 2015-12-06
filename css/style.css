@@ -167,7 +167,13 @@ p {
   max-width: 1200px;
 }
 
-/*terminology overview*/
+blockquote {
+  font-family: verdana;
+  color: white;
+  background: #A1E0D9;
+}
+
+/*overview*/
 .overview {
   background: #87D8CF;
   padding: 10px;
@@ -175,7 +181,7 @@ p {
   width: 100%;
 }
 
-/*terminology blocks*/
+/*background blocks*/
 .displayterm {
   background: #61CBBF;
   padding: 10px; 
