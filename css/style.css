@@ -141,6 +141,12 @@ ul {
   color: white;
 }
 
+/*images*/
+img.browsers {
+  max-width: 800px;
+  width: 100%;
+}
+
 /*paragraphs*/
 p {
   font-size: 1em;
