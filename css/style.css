@@ -157,6 +157,10 @@ img.browsers {
   max-width: 800px;
 }
 
+img.timeline {
+  max-width: 900px;
+}
+
 /*paragraphs*/
 p {
   font-size: 1em;
