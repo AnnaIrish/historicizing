@@ -41,6 +41,20 @@
        <blockquote cite="http://www.smashingmagazine.com/2015/11/flexbox-interfaces-tracks-case-study/"><i>The days of floats and margin trickery are finally behind us, as CSS furnishes developers with new and improved properties perfect for those delicate layouts. Layout features such as vertical alignment, evenly distributed spacing, source-order control and other patterns such as "sticky" footers are quite effortless to achieve with Flexbox.
        <br> - Dennis Gaebel Jr</i></blockquote>
        <p>When HTML and CSS were originally created they were meant for documents not applications.  CSS’s ability for page layout had a difficult start. Several intricate hacks developed to solve basic problems like floats for a two-page layout and display: table to lay things out horizontally. These different methods would all do virtually the same thing in very different ways and if one method did not work, you would need to know another one. Flexbox fixes a lot of these problems. It has four parts: direction, alignment, ordering, and flexibility. Typically, direction on a page goes from top to bottom. With Flexbox, direction can go top to bottom, bottom to top, left to right, and right to left. All directions render the same way. In CSS alignment can be a problem making it difficult to vertically center something. Flexbox solves this with one property. Flexbox lets you put your source in whatever order you want to. The order can be arbitrarily reordered in the document. Flexbox’s flexibility derives from its ability to tell an item to take up whatever space is leftover. This can be hacked with hidden overflow elements and positioning them next to a float but it only works in a few cases.</p>
+       <p>
+       Each version of Flexbox addresses new issues to solve. Members of the W3C Working Group present an issue with the spec, provide a proposal, and after other members review the issue they decide on how to resolve it. As Flexbox is continually updated, it will progress towards an ideal flexible grid layout module close to Dilger’s expectation. Currently, Flexbox is not the be-all end-all of layout modules. A combination of grid and Flexbox is ideal for creating the best layout, using the best features of each. Flexbox can be used by itself to solve many layout problems such as the Holy Grail Layout. 
+       </p>
+       <p>
+       The Holy Grail layout has a header across the top of the page, a footer across the bottom, and in between are three columns: navigation, content, and sidebar. The main aims of the Holy Grail Layout are:
+       <ul>
+       <li>Should have fluid center with fixed-width sidebars</li>
+       <li>Center column (main content) should appear first in the HTML source</li>
+       <li>All columns should be the same height</li>
+       <li>Should require minimal markup</li>
+       <li>”Sticky” footer (footer should stick to the bottom of the page when content is sparse)</li>
+       </ul>
+       This is a common layout and the current ways of creating it have drawbacks and there are obstacles in the way of creating it. Some of these obstacles include: non-semantic use of HTML, incorrect rendering of content, limited capabilities of CSS for page layout, etc. Because of its difficulty in creation, finding an optimal implementation eludes to searching for the Holy Grail, hence the name.  
+       </p>
      </div>
   </div>
   <div class="darkbackground">
